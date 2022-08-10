@@ -17,7 +17,8 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model) {
         model.addAttribute("books", bookRepository.findAll());
-        return "books";
+        // Returns data to the template list.html in /templates/books
+        return "books/list";
     }
 
 }
